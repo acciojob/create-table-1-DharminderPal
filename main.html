@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Row Insertion</title>
+	<meta charset=utf-8 /> 
+	<title>Insert row in a table</title> 
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <table id="sampleTable" border="1">
-        <thead>
-            <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- New rows will be inserted here -->
-        </tbody>
-    </table>
-    <button onclick="insert_Row()">Add Row</button>
+	<table id="sampleTable" border="1"> 
+		<tr><td>Row1 cell1</td> 
+		<td>Row1 cell2</td></tr> 
+		<tr><td>Row2 cell1</td> 
+		<td>Row2 cell2</td></tr> 
+	</table><br> 
+	
+	<input type="button" onclick="insert_Row()" value="Insert row">  
+    <script type="text/javascript" src="./script.js">
+</script>
 
-    <script>
-        function insert_Row() {
-            // Get the table body element
-            var tableBody = document.getElementById("sampleTable").getElementsByTagName("tbody")[0];
-
-            // Create a new row (<tr>) element
-            var newRow = tableBody.insertRow(); // Insert at the end of the table body
-
-            // Create two cells for the new row
-            var cell1 = newRow.insertCell(0); // Left cell
-            var cell2 = newRow.insertCell(1); // Right cell
-
-            // Set the text content of the cells to the expected values
-            cell1.textContent = "New Cell1";  // Change this to match the test case
-            cell2.textContent = "New Cell2";  // Change this to match the test case
-        }
-    </script>
 </body>
+
 </html>
